@@ -1,0 +1,45 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-colum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid lightblue;
+  padding: 5px 10px;
+  outline: none;
+  margin-right: 20px;
+}
+.icons {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.icons:hover {
+  cursor: pointer;
+}
+
+#root {
+  height: 100vh;
+}
