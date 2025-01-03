@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { act } from "react";
+import { toast } from "react-toastify";
 
 const getBasketFromStorage = () => {
   if (localStorage.getItem("basket")) {
@@ -36,10 +37,19 @@ export const basketSlice = createSlice({
         findbasketproduct.count += action.payload.count;
         state.basketproducts = [...extractedProducts, findbasketproduct];
         writeFrombasketToStorage(state.basketproducts);
+        toast.success("Ürün sepete eklendi!", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+
       } else {
         //daha önceden eklenmemiş
         state.basketproducts = [...state.basketproducts, action.payload];
         writeFrombasketToStorage(state.basketproducts);
+        toast.success("Ürün sepete eklendi!", {
+          position: "top-right",
+          autoClose: 3000,
+        });
       }
     },
 

@@ -16,6 +16,9 @@ import {
   deleteToProductBasket,
 } from "./redux/slice/BasketSlice";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   const [count, setCount] = useState(0);
   const { basketproducts, drawer, totalAmount } = useSelector(
@@ -36,6 +39,7 @@ function App() {
         <Header />
         <RouterConfig />
         <Loading />
+        <ToastContainer />
         <Drawer
           anchor="right"
           open={drawer}

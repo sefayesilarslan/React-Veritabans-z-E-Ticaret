@@ -26,6 +26,8 @@ function ProductDetails() {
     products &&
       products.map((product) => {
         if (product.id == id) {
+
+          console.log(product);
           dispatch(setSelectedProduct(product));
         }
       });

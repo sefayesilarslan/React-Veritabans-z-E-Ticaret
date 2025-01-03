@@ -29,7 +29,7 @@ function Header() {
   return (
     <div className="space-between">
       <div className="flex-row">
-        <img className="logo" src="./src/images/logo.webp" />
+        <img className="logo" src="/images/logo.webp" alt="Logo" />
       </div>
       <div className="flex-row">
         <input className="search-input" type="text" placeholder="Ara" />
